@@ -1,5 +1,17 @@
 
-<input type="text" [(ngModel)] ="name">
-<P>
-  hii {{ name }}
-</P>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+        Hi Friends,lets learn basic about angular today.
+  </div>
+  <button class="btn btn-primary" (click)="onShowDeaiils()">Show Details</button>
+  <div class="row" *ngIf="displayDetails">
+    This is project is about basic idea to use angular and its built in directives like ngIf ,ngclass,ngStyle,ngFor.
+  </div>
+  <div class="row" *ngFor="let num of ClickNumbersLog">
+    <p [ngStyle]="{color : getcolor(num) }" [ngClass]="{even : num % 2 == 0}">
+      {{ num }}
+    </p>
+  </div>
+  </div>
+</div>
